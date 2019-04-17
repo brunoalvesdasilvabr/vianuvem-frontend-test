@@ -1,0 +1,63 @@
+body{
+    margin:0;
+    padding:0;
+    
+}
+
+
+.container{
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    width:100%;
+    height:400px;
+}
+
+
+.container .imageContainer img{
+    width: 100px;
+    height: 100px;
+    border-radius:50%;
+    border-style: solid;
+    
+}
+
+.container .imageContainer img[src="../../img/facebook.jpg"]{
+    border-width: 9px; 
+}
+.container .imageContainer img[src="../../img/skype.png"]{
+    border-width: 4px; 
+}
+.imageContainer{
+    position: relative;
+}
+
+.ballon{
+    padding:10px 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity:0;
+    z-index:9;
+    transition:all .4s;
+}
+
+.imageContainer:hover .ballon{
+    opacity:1;
+    background-color:#5a5a5a;
+    color:white;
+}
+@media screen and (max-width:500px){
+    .container{
+    flex-direction: column;
+    height: 94vh;
+    margin-top: 30px;
+    }
+    .container .imageContainer:not(:last-child){
+        margin: 20px;
+    }
+    .container .imageContainer img{
+        width: 80px;
+        height: 80px;
+  }

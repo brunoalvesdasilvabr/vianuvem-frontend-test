@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <link href="/css/style.css" rel="stylesheet">
+            <title>Front end Test</title>
+        </head>
+        <body>
+                <div class="container">
+                    <% circles.forEach(function(circles){ %>
+                        <div class="imageContainer" >
+                            <img style="border-color:<%= circles.color %>;transform:scale(<%= circles.size %>)" 
+                            src="../../<%= circles.image %>">
+                            <div class="ballon"><%= circles.name %></div>
+                        </div>
+                    <% }); %>
+                </div>
+            
+        </body>
+</html>
